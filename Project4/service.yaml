@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: up-app-service
+  labels:
+    app: up-app
+spec:
+  type: LoadBalancer
+  selector:
+    app: up-app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80

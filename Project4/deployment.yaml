@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: up-app
+  labels:
+    app: up-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: up-app
+  template:
+    metadata:
+      labels:
+        app: up-app
+    spec:
+      containers:
+      - name: up-app
+        image: 783490810970.dkr.ecr.us-west-2.amazonaws.com/up-app:latest
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 15
+          periodSeconds: 20
