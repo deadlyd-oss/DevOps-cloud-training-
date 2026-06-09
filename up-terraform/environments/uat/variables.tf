@@ -1,0 +1,9 @@
+variable "region" { default = "us-west-2" }
+variable "environment" { default = "uat" }
+variable "vpc_cidr" { default = "10.1.0.0/16" }
+variable "public_subnet_cidr" { default = "10.1.1.0/24" }
+variable "ami_id" { default = "ami-0c2d06d50ce30b442" }
+variable "instance_type" { default = "t2.small" }
+variable "db_name" { default = "upuatdb" }
+variable "db_username" { default = "adminuser" }
+variable "db_password" { sensitive = true }

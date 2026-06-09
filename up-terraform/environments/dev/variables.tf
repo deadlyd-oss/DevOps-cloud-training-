@@ -1,0 +1,10 @@
+variable "region" { default = "us-west-2" }
+variable "environment" { default = "dev" }
+variable "vpc_cidr" { default = "10.0.0.0/16" }
+variable "public_subnet_cidr" { default = "10.0.1.0/24" }
+variable "public_subnet_cidr_b" { default = "10.0.2.0/24" }
+variable "ami_id" { default = "ami-0c2d06d50ce30b442" }
+variable "instance_type" { default = "t2.micro" }
+variable "db_name" { default = "updevdb" }
+variable "db_username" { default = "adminuser" }
+variable "db_password" { sensitive = true }

@@ -1,0 +1,9 @@
+variable "region" { default = "us-west-2" }
+variable "environment" { default = "prod" }
+variable "vpc_cidr" { default = "10.2.0.0/16" }
+variable "public_subnet_cidr" { default = "10.2.1.0/24" }
+variable "ami_id" { default = "ami-0c2d06d50ce30b442" }
+variable "instance_type" { default = "t3.medium" }
+variable "db_name" { default = "upproddb" }
+variable "db_username" { default = "adminuser" }
+variable "db_password" { sensitive = true }
