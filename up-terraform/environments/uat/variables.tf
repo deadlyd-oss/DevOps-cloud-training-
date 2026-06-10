@@ -7,3 +7,5 @@ variable "instance_type" { default = "t2.small" }
 variable "db_name" { default = "upuatdb" }
 variable "db_username" { default = "adminuser" }
 variable "db_password" { sensitive = true }
+
+variable "public_subnet_cidr_b" { default = "10.1.2.0/24" }

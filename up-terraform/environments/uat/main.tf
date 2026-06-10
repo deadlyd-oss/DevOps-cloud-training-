@@ -6,7 +6,8 @@ module "vpc" {
   source             = "../../modules/vpc"
   environment        = var.environment
   vpc_cidr           = var.vpc_cidr
-  public_subnet_cidr = var.public_subnet_cidr
+  public_subnet_cidr   = var.public_subnet_cidr
+  public_subnet_cidr_b = var.public_subnet_cidr_b
   region             = var.region
 }
 
