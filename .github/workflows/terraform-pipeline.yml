@@ -35,7 +35,7 @@ jobs:
 
       - name: Terraform Plan - Dev
         working-directory: up-terraform/environments/dev
-        run: terraform plan -out=dev.tfplan
+        run: terraform plan -out=dev.tfplan -var="db_password=UPprod2024!"
 
       - name: Terraform Apply - Dev
         working-directory: up-terraform/environments/dev
@@ -68,7 +68,7 @@ jobs:
 
       - name: Terraform Plan - UAT
         working-directory: up-terraform/environments/uat
-        run: terraform plan -out=uat.tfplan
+        run: terraform plan -out=uat.tfplan -var="db_password=UPprod2024!"
 
       - name: Terraform Apply - UAT
         working-directory: up-terraform/environments/uat
@@ -101,7 +101,7 @@ jobs:
 
       - name: Terraform Plan - Prod
         working-directory: up-terraform/environments/prod
-        run: terraform plan -out=prod.tfplan
+        run: terraform plan -out=prod.tfplan -var="db_password=UPprod2024!"
 
       - name: Terraform Apply - Prod
         working-directory: up-terraform/environments/prod
